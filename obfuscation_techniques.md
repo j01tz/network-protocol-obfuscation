@@ -2,7 +2,9 @@
 
 All known network obfuscation techniques can be detected and blocked with active attacks and enough traffic[0]. The overall effectiveness for each method is based on the theoretical difficulty to distinguish the "obfuscated traffic" from "normal traffic" and the practical detection and blocking of the "obfuscated traffic" flows in practice around the world.
 
-## "Working" Network Protocol Obfuscation Techniques
+## _Working_ Network Protocol Obfuscation Techniques
+
+_These techniques have working, well-tested implementations with many users._
 
 | Protocol | Approach | *TPR | *FPR | Effectiveness | Notes |
 | --- | --- | --- | --- | --- | --- |
@@ -12,11 +14,21 @@ All known network obfuscation techniques can be detected and blocked with active
 
 ![alt text](graphs/users_by_transport.png "Most Used Tor Obfuscators Q1 2020")
 
+## _Research_ Network Protocol Obfuscation Techniques
 
-## "Broken/Deprecated/Abandoned" Network Protocol Obfuscation Techniques
+_These techniques may or may not have working implementations. They require more time for assessment before being used with confidence._
+
+| Protocol | Notes |
+| --- | --- |
+| [DNS-Morph](https://arxiv.org/abs/1904.01240) | Modification to obfs design to use DNS-based handshake |
+| [Snowflake](https://trac.torproject.org/projects/tor/wiki/doc/Snowflake) | Uses temporary WebRTC proxies, similar to flash proxies but solves NAT problems |
+
+## _Broken/Deprecated/Abandoned_ Network Protocol Obfuscation Techniques
+
+_These techniques are completely broken, depcreated in favor of a newer protocol or abandoned. They are listed for research purposes._
 
 | Protocol | Approach | *TPR | *FPR |
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- |
 | [Obfs3](https://gitweb.torproject.org/pluggable-transports/obfsproxy.git/tree/doc/obfs3/obfs3-protocol-spec.txt) | Randomizer | 100% | 0.2% |
 | [ScrambleSuit](http://www.cs.kau.se/philwint/scramblesuit/) | Randomizer | NA | NA |
 | [Dust](https://github.com/blanu/Dust) | Randomizer | NA | NA |
